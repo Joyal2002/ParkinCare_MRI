@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parkinson's Disease Prediction</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Parkinson's Disease Prediction</h1>
+      <p>
+        Upload an MRI image below to predict the likelihood of Parkinson's
+        disease.
+      </p>
+    </header>
+
+    <main>
+      <section class="input-section" id="input-section">
+        <h2>Prediction Result: {{prediction}}</h2>
+        <a href="/" style="margin: 1rem">Test again</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Parkinson's Disease Prediction</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

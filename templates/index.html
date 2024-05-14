@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parkinson's Disease Prediction</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Parkinson's Disease Prediction</h1>
+      <p>
+        Upload an MRI image below to predict the likelihood of Parkinson's
+        disease.
+      </p>
+    </header>
+
+    <main>
+      <section class="input-section">
+        <h2>Upload MRI Image</h2>
+        <form
+          id="upload-form"
+          enctype="multipart/form-data"
+          action="/upload"
+          method="post"
+        >
+          <input
+            type="file"
+            name="file"
+            id="upload"
+            accept=".jpg, .jpeg, .png"
+          />
+          <label for="upload" class="upload-btn">Choose File</label>
+          <p class="file-name">No file chosen</p>
+          <span class="tooltip">Supported formats: JPG, JPEG, PNG</span>
+          <button id="submit-btn">Submit</button>
+        </form>
+        <p id="error-message" class="error-message"></p>
+      </section>
+
+      <section class="result-section" id="result-section" style="display: none">
+        <h2>Prediction Result</h2>
+        <p id="prediction-text"></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Parkinson's Disease Prediction</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

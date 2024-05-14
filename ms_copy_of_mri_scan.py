@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1iWYKi3tqKmMCEvx9__doYoV4xkoMaQdM
 """
 
-pip install pydicom
+# pip install pydicom
 
 from __future__ import absolute_import, division, print_function, unicode_literals
 import tensorflow as tf
